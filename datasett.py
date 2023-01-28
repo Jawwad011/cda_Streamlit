@@ -12,7 +12,7 @@ import streamlit as st
 
 #readingg the file
 
-df=pd.read_csv(Billionaire.csv)
+df=pd.read_csv("Billionaire.csv")
 df2=st.file_uploader(label="Upload Your file", type="csv")
 #find the count of billioners by country
 bill_count=df.groupby('Country')['Name'].count().sort_values().head(20)
